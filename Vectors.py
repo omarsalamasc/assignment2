@@ -12,3 +12,13 @@ sum_of_squares = 0
 for i in range(3):
     sum_of_squares = sum_of_squares + (vector[i] * vector[i])
     print("Current sum of squares:", sum_of_squares)
+
+# calculating square root using a for loop
+print("Computing square root approximation:")
+approx = sum_of_squares  # Initial guess
+for i in range(10):  # Approximate square root using 10 iterations
+    approx = (approx + sum_of_squares / approx) / 2
+    print("Iteration", i + 1, "approximate square root:", approx)
+
+# Display the result
+print("The magnitude of the vector is:", approx)
