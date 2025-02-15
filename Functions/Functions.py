@@ -24,3 +24,18 @@ def sumSqDiff(numbers):
 print("Enter numbers separated by spaces: ")
 user_input = input()  # Get user input
 user_numbers = []  # Create an empty list
+
+# Convert input string to list of integers
+for num in user_input.split():
+    user_numbers.append(int(num))
+
+# Calculate standard deviation
+sum_squared_diff = sumSqDiff(user_numbers)
+N = 0
+for num in user_numbers:
+    N += 1
+
+standard_deviation = (sum_squared_diff / N) ** 0.5
+
+# Print the result
+print("Standard Deviation:", standard_deviation)
